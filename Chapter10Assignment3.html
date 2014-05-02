@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>My Program</title>
+<script type="text/javascript">
+function getMiddle(list)
+{
+	var mid = 0;
+	if (list.length % 2 == 0)
+	{
+		var first = Math.floor((list.length-1)/2);
+		var second = Math.round((list.length)/2);
+		mid = (list[first] + list[second]) /2;
+	}
+	else
+	{
+		mid = list[Math.round((list.length - 1)/2)]
+	}
+	
+	document.getElementById('output').innerHTML = mid;
+}
+
+function getArray()
+{
+	var list = [72, 3, 59, 0, 16];
+	getMiddle(list);
+}
+</script>
+</head>
+<body>
+<button type = "button" onclick = "getArray()">Power Up</button>
+<div id="output"></div>
+</body>
+</html>
